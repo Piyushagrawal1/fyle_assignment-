@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Tax Calculator</h2>
+        <form id="taxForm">
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <select id="age" class="input-field">
+                    <option value="<40">&lt; 40</option>
+                    <option value="40-60">≥ 40 &amp; &lt; 60</option>
+                    <option value="≥60">≥ 60</option>
+                </select>
+                <div class="error-icon" id="ageErrorIcon" style="display: none;">!</div>
+            </div>
+            <div class="form-group">
+                <label for="income">Gross Annual Income:</label>
+                <input type="number" id="income" class="input-field">
+                <div class="error-icon" id="incomeErrorIcon" style="display: none;">!</div>
+            </div>
+            <div class="form-group">
+                <label for="extraIncome">Extra Income:</label>
+                <input type="number" id="extraIncome" class="input-field">
+                <div class="error-icon" id="extraIncomeErrorIcon" style="display: none;">!</div>
+            </div>
+            <div class="form-group">
+                <label for="deductions">Deductions:</label>
+                <input type="number" id="deductions" class="input-field">
+                <div class="error-icon" id="deductionsErrorIcon" style="display: none;">!</div>
+            </div>
+            <button type="submit" id="submitBtn">Submit</button>
+        </form>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Tax Calculation Result</h2>
+            <p id="result"></p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
